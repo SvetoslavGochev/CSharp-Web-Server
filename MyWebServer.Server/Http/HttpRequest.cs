@@ -1,16 +1,14 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace MyWebServer.Server.Http
+﻿namespace MyWebServer.Server.Http
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
     public class HttpRequest
     {
 
         private const string NewLine = "/r/n";
 
-        public HttrpMethod Method { get; private set; }
+        public HttpMethod Method { get; private set; }
 
         public string Url { get; private set; }
 
@@ -40,20 +38,20 @@ namespace MyWebServer.Server.Http
                 Method = method,
                 Url = url,
                 Headers = headers,
-                 Body = body
+                Body = body
             };
 
 
         }
 
-        private static HttrpMethod ParsehttpMethod(string method)
+        private static HttpMethod ParsehttpMethod(string method)
         {
             return method.ToUpper() switch
             {
-                "GET" => HttrpMethod.Get,
-                "POST" => HttrpMethod.Post,
-                "PUT" => HttrpMethod.Put,
-                "DELETE" => HttrpMethod.Delete,
+                "GET" => HttpMethod.Get,
+                "POST" => HttpMethod.Post,
+                "PUT" => HttpMethod.Put,
+                "DELETE" => HttpMethod.Delete,
                 _ => throw new InvalidOperationException($"Method {method} is not implanet")
             };
         }
@@ -68,17 +66,17 @@ namespace MyWebServer.Server.Http
                     break;
                 }
 
-                var headrParts = headerLine.Split(":");
+                var headerParts = headerLine.Split(":", 2);
 
-                if (headrParts.Length != 2)
+                if (headerParts.Length != 2 )
                 {
-                    throw new InvalidOperationException("request sdfds..");
+                    throw new InvalidOperationException("request is not valid!");
                 }
 
                 var header = new HttpHeader
                 {
-                    Name = headrParts[0],
-                    Value = headrParts[1].Trim()
+                    Name = headerParts[0],
+                Value = headerParts[1].Trim()
                 };
 
                 headertCollection.Add(header);

@@ -23,8 +23,7 @@
 
         public async Task Start()
         {
-           
-
+            
             this.listener.Start();
 
             Console.WriteLine($"Server started on port {port}...");
