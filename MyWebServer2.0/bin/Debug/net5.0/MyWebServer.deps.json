@@ -1,0 +1,54 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "MyWebServer/1.0.0": {
+        "dependencies": {
+          "MyWebServer.Server2.0": "1.0.0"
+        },
+        "runtime": {
+          "MyWebServer.dll": {}
+        }
+      },
+      "EnterpriseLibrary.Common/6.0.1304": {
+        "runtime": {
+          "lib/NET45/Microsoft.Practices.EnterpriseLibrary.Common.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1304.0"
+          }
+        }
+      },
+      "MyWebServer.Server2.0/1.0.0": {
+        "dependencies": {
+          "EnterpriseLibrary.Common": "6.0.1304"
+        },
+        "runtime": {
+          "MyWebServer.Server2.0.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MyWebServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EnterpriseLibrary.Common/6.0.1304": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w/ua1PWAQD1/CnJ+qz/5APgmqI/1YnbamnwFGSotm7b66sFIkrnfLC+9+WzcSZWnePwwUw3Pl2QsLVDyX7NwaQ==",
+      "path": "enterpriselibrary.common/6.0.1304",
+      "hashPath": "enterpriselibrary.common.6.0.1304.nupkg.sha512"
+    },
+    "MyWebServer.Server2.0/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "5SYi42L4Asm6gt71B+55QVKtLiuMgr0ycRNDN/tqj1BpyupHMvgHSSzShbsNNgM6LiLDXc9CWMK+pN+UVhsF2g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Svetoslav\\source\\repos\\MyWebServer2.0\\MyWebServer2.0\\MyWebServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Svetoslav\\.nuget\\packages\\enterpriselibrary.common\\6.0.1304\\enterpriselibrary.common.6.0.1304.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnterpriseLibrary.Common 6.0.1304' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EnterpriseLibrary.Common",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}
